@@ -91,19 +91,22 @@ let mediaJSON = {
       'duration': 743
     },
     {
-      'contentUrl': 'https://bastianu.github.io/videos/1.mp3',
-      'contentType': 'video/mp3',
+      'contentUrl': 'https://bastianu.github.io/videos/1.mp4',
+      'contentType': 'video/mp4',
       'title': 'Slt',
+      'thumb': 'https://i3.ytimg.com/vi/GSPUUN4nDGE/maxresdefault.jpg',
     },
     {
-      'contentUrl': 'https://bastianu.github.io/videos/3.mp3',
-      'contentType': 'video/mp3',
+      'contentUrl': 'https://bastianu.github.io/videos/3.mp4',
+      'contentType': 'video/mp4',
       'title': 'Slt2',
+       'thumb': 'https://i3.ytimg.com/vi/GSPUUN4nDGE/maxresdefault.jpg',
     },
     {
-      'contentUrl': 'https://bastianu.github.io/videos/3.mp3',
-      'contentType': 'video/mp3',
+      'contentUrl': 'https://bastianu.github.io/videos/3.mp4',
+      'contentType': 'video/mp4',
       'title': 'Slt3',
+       'thumb': 'https://i3.ytimg.com/vi/GSPUUN4nDGE/maxresdefault.jpg',
     }
   ]
 };
