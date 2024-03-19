@@ -89,6 +89,21 @@ let mediaJSON = {
       'thumb': 'tears_of_steel/images/screenshot7.png',
       'title': 'Tears of Steel',
       'duration': 743
+    },
+    {
+      'contentUrl': 'https://bastianu.github.io/videos/1.mp3',
+      'contentType': 'video/mp3',
+      'title': 'Slt',
+    },
+    {
+      'contentUrl': 'https://bastianu.github.io/videos/3.mp3',
+      'contentType': 'video/mp3',
+      'title': 'Slt2',
+    },
+    {
+      'contentUrl': 'https://bastianu.github.io/videos/3.mp3',
+      'contentType': 'video/mp3',
+      'title': 'Slt3',
     }
   ]
 };
