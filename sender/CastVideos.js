@@ -26,7 +26,8 @@ import {
 const DEMO_MODE = false;
 
 /** @const {string} Media source root URL */
-const MEDIA_SOURCE_ROOT = 'https://storage.googleapis.com/cpe-sample-media/content/';
+// const MEDIA_SOURCE_ROOT = 'https://storage.googleapis.com/cpe-sample-media/content/';
+const MEDIA_SOURCE_ROOT = '';
 
 /**
  * Controls if Ads are enabled. Controlled by radio button.
@@ -398,9 +399,7 @@ CastPlayer.prototype.setupLocalPlayer = function () {
   };
 
   playerTarget.load = function (mediaIndex) {
-    localPlayer.src = (this.mediaContents[mediaIndex]['fullUrl']) ?  
-      this.mediaContents[mediaIndex]['contentUrl'] : 
-      MEDIA_SOURCE_ROOT + this.mediaContents[mediaIndex]['contentUrl'];
+    localPlayer.src = MEDIA_SOURCE_ROOT + this.mediaContents[mediaIndex]['contentUrl'];
     localPlayer.load();
   }.bind(this);
 
@@ -408,9 +407,7 @@ CastPlayer.prototype.setupLocalPlayer = function () {
     if (!mediaIndex) {
       return (localPlayer.src !== null && localPlayer.src !== "");
     } else {
-      return (localPlayer.src == ((this.mediaContents[mediaIndex]['fullUrl']) ?  
-        this.mediaContents[mediaIndex]['contentUrl'] : 
-        MEDIA_SOURCE_ROOT + this.mediaContents[mediaIndex]['contentUrl']));
+      return (localPlayer.src == MEDIA_SOURCE_ROOT + this.mediaContents[mediaIndex]['contentUrl']);
     }
   }.bind(this);
 
