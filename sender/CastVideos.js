@@ -398,7 +398,9 @@ CastPlayer.prototype.setupLocalPlayer = function () {
   };
 
   playerTarget.load = function (mediaIndex) {
-    localPlayer.src = MEDIA_SOURCE_ROOT + this.mediaContents[mediaIndex]['contentUrl'];
+    localPlayer.src = (this.mediaContents[mediaIndex]['fullUrl']) ?  
+      this.mediaContents[mediaIndex]['contentUrl'] : 
+      MEDIA_SOURCE_ROOT + this.mediaContents[mediaIndex]['contentUrl'];
     localPlayer.load();
   }.bind(this);
 
@@ -406,7 +408,9 @@ CastPlayer.prototype.setupLocalPlayer = function () {
     if (!mediaIndex) {
       return (localPlayer.src !== null && localPlayer.src !== "");
     } else {
-      return (localPlayer.src == MEDIA_SOURCE_ROOT + this.mediaContents[mediaIndex]['contentUrl']);
+      return (localPlayer.src == ((this.mediaContents[mediaIndex]['fullUrl']) ?  
+        this.mediaContents[mediaIndex]['contentUrl'] : 
+        MEDIA_SOURCE_ROOT + this.mediaContents[mediaIndex]['contentUrl']));
     }
   }.bind(this);
 

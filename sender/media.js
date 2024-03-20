@@ -24,7 +24,8 @@ let mediaJSON = {
       'contentType': 'video/mp4',
       'thumb': 'big_buck_bunny/images/screenshot1.png',
       'title': 'Big Buck Bunny',
-      'duration': 596
+      'duration': 596,
+      'fullUrl': false,
     },
     {
       'subtitle': 'Friends Proog and Emo journey inside the folds of a seemingly infinite Machine.',
@@ -32,7 +33,8 @@ let mediaJSON = {
       'contentType': 'video/mp4',
       'thumb': 'elephants_dream/images/screenshot7.png',
       'title': 'Elephant Dream',
-      'duration': 653
+      'duration': 653,
+      'fullUrl': false,
     },
     {
       'subtitle': 'Introducing Chromecast. The easiest way to enjoy online video and music on your TV. Find out more at google.com/chromecast.',
@@ -40,7 +42,8 @@ let mediaJSON = {
       'contentType': 'video/mp4',
       'thumb': 'ads/for_bigger_blazes/images/screenshot8.png',
       'title': 'For Bigger Blazes',
-      'duration': 15
+      'duration': 15,
+      'fullUrl': false,
     },
     {
       'subtitle': 'Introducing Chromecast. The easiest way to enjoy online video and music on your TV. Find out more at google.com/chromecast.',
@@ -48,7 +51,8 @@ let mediaJSON = {
       'contentType': 'video/mp4',
       'thumb': 'ads/for_bigger_escapes/images/screenshot7.png',
       'title': 'For Bigger Escape',
-      'duration': 15
+      'duration': 15,
+      'fullUrl': false,
     },
     {
       'subtitle': 'Introducing Chromecast. The easiest way to enjoy online video and music on your TV. Find out more at google.com/chromecast.',
@@ -56,7 +60,8 @@ let mediaJSON = {
       'contentType': 'video/mp4',
       'thumb': 'ads/for_bigger_escapes/images/screenshot7.png',
       'title': 'For Bigger Fun',
-      'duration': 60
+      'duration': 60,
+      'fullUrl': false,
     },
     {
       'subtitle': 'Introducing Chromecast. The easiest way to enjoy online video and music on your TV. Find out more at google.com/chromecast.',
@@ -64,7 +69,8 @@ let mediaJSON = {
       'contentType': 'video/mp4',
       'thumb': 'ads/for_bigger_joyrides/images/screenshot8.png',
       'title': 'For Bigger Joyrides',
-      'duration': 15
+      'duration': 15,
+      'fullUrl': false,
     },
     {
       'subtitle': 'Introducing Chromecast. The easiest way to enjoy online video and music on your TV. Find out more at google.com/chromecast.',
@@ -72,7 +78,8 @@ let mediaJSON = {
       'contentType': 'video/mp4',
       'thumb': 'ads/for_bigger_meltdowns/images/screenshot6.png',
       'title': 'For Bigger Meltdowns',
-      'duration': 15
+      'duration': 15,
+      'fullUrl': false,
     },
     {
       'subtitle': 'A lonely young woman, Sintel, helps and befriends a dragon, whom she calls Scales. But when he is kidnapped by an adult dragon, Sintel decides to embark on a dangerous quest to find her lost friend Scales.',
@@ -80,7 +87,8 @@ let mediaJSON = {
       'contentType': 'video/mp4',
       'thumb': 'sintel/images/screenshot7.png',
       'title': 'Sintel',
-      'duration': 887
+      'duration': 887,
+      'fullUrl': false,
     },
     {
       'subtitle': 'In an apocalyptic future, a group of soldiers and scientists takes refuge in Amsterdam to try to stop an army of robots that threatens the planet.',
@@ -88,25 +96,29 @@ let mediaJSON = {
       'contentType': 'video/mp4',
       'thumb': 'tears_of_steel/images/screenshot7.png',
       'title': 'Tears of Steel',
-      'duration': 743
+      'duration': 743,
+      'fullUrl': false,
     },
     {
       'contentUrl': 'https://bastianu.github.io/videos/1.mp4',
       'contentType': 'video/mp4',
       'title': 'Slt',
       'thumb': 'https://i3.ytimg.com/vi/GSPUUN4nDGE/maxresdefault.jpg',
+      'fullUrl': false,
     },
     {
       'contentUrl': 'https://bastianu.github.io/videos/3.mp4',
       'contentType': 'video/mp4',
       'title': 'Slt2',
        'thumb': 'https://i3.ytimg.com/vi/GSPUUN4nDGE/maxresdefault.jpg',
+       'fullUrl': false,
     },
     {
       'contentUrl': 'https://bastianu.github.io/videos/3.mp4',
       'contentType': 'video/mp4',
       'title': 'Slt3',
        'thumb': 'https://i3.ytimg.com/vi/GSPUUN4nDGE/maxresdefault.jpg',
+       'fullUrl': false,
     }
   ]
 };
