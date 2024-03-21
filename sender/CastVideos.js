@@ -158,10 +158,16 @@ var CastPlayer = function () {
   /** @type {boolean} Remote player is playing live content. */
   this.isLiveContent = false;
 
+  // this.setupLocalPlayer();
+  // this.addVideoThumbs();
+  // this.initializeUI();
+};
+
+ CastPlayer.prototype.init = function () {
   this.setupLocalPlayer();
   this.addVideoThumbs();
   this.initializeUI();
-};
+ }
 
 CastPlayer.prototype.initializeCastPlayer = function () {
   var options = {};
@@ -1652,8 +1658,19 @@ window['__onGCastApiAvailable'] = function (isAvailable) {
 };
 
 window.addEventListener('message', event => {
+  if(event.origin != 'http://localhost:8080') return
   console.log(chrome.cast)
-  console.log(event);
+  switch(event.data){
+    case 'a': 
+      CastPlayer.init()
+      break;
+    case 'b':
+      console.log(CastPlayer.mediaContents)
+      break;
+
+    default:
+      break;
+  }
   return {cast: chrome.cast, castPlayer: castPlayer}
 
 });
