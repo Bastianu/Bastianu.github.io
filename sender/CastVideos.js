@@ -1648,10 +1648,12 @@ let castPlayer = new CastPlayer();
 window['__onGCastApiAvailable'] = function (isAvailable) {
   if (isAvailable) {
     setTimeout(castPlayer.initializeCastPlayer, 3000);
-    window.addEventListener('message', event => {
-          console.log(chrome.cast)
-          console.log(event.data);
-
-  });
   }
 };
+
+window.addEventListener('message', event => {
+  console.log(chrome.cast)
+  console.log(event);
+  return {cast: chrome.cast, castPlayer: castPlayer}
+
+});
