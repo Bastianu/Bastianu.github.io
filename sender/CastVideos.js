@@ -1662,10 +1662,10 @@ window.addEventListener('message', event => {
   console.log(chrome.cast)
   switch(event.data){
     case 'a': 
-      CastPlayer.init()
+      castPlayer.init()
       break;
     case 'b':
-      console.log(CastPlayer.mediaContents)
+      console.log(castPlayer.mediaContents)
       break;
 
     default:
