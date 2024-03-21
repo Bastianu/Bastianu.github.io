@@ -1647,6 +1647,10 @@ CastPlayer.getErrorMessage = function (error) {
 let castPlayer = new CastPlayer();
 window['__onGCastApiAvailable'] = function (isAvailable) {
   if (isAvailable) {
-    castPlayer.initializeCastPlayer();
+    setTimeout(castPlayer.initializeCastPlayer, 3000);
+    window.addEventListener('message', event => {
+          console.log(event.data);
+
+  });
   }
 };
