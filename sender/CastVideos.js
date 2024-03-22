@@ -175,7 +175,12 @@ var CastPlayer = function () {
  }
 
  CastPlayer.prototype.setMedia = function (medias) {
+  console.log("before change")
+  console.log(this.mediaContents)
+  console.log(this.media)
   this.mediaContents = medias
+  console.log("after change")
+  console.log(this.mediaContents)
  }
 
 CastPlayer.prototype.initializeCastPlayer = function () {
@@ -1689,8 +1694,8 @@ window.addEventListener('message', event => {
     case 'e':
       console.log(event.data.data)
       castPlayer.setMedia(event.data.data)
-      mediaJSON['media'] = event.data.data
-      castPlayer.mediaContents = event.data.data
+      // mediaJSON['media'] = event.data.data
+      // castPlayer.mediaContents = event.data.data
       castPlayer.reset()
       break;
 
