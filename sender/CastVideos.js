@@ -1657,10 +1657,14 @@ let castPlayer = new CastPlayer();
 //   }
 // };
 
+
+
 window.addEventListener('message', event => {
+  let carousel = document.getElementById("carousel");
+
   if(event.origin != 'http://localhost:8080') return
   console.log(chrome.cast)
-  switch(event.data){
+  switch(event.data.action){
     case 'a': 
       castPlayer.init()
       break;
@@ -1671,12 +1675,31 @@ window.addEventListener('message', event => {
       console.log(castPlayer.initializeCastPlayer())
       break;
     case 'd':
-      const myNode = document.getElementById("carousel");
-      myNode.textContent = '';
+      carousel.textContent = '';
+      castPlayer.mediaContents = [{
+        'contentUrl': 'https://bastianu.github.io/videos/1.mp4',
+        'contentType': 'video/mp4',
+        'title': 'Slt',
+        'thumb': 'https://i3.ytimg.com/vi/GSPUUN4nDGE/maxresdefault.jpg',
+      },
+      {
+        'contentUrl': 'https://bastianu.github.io/videos/3.mp4',
+        'contentType': 'video/mp4',
+        'title': 'Slt2',
+         'thumb': 'https://i3.ytimg.com/vi/GSPUUN4nDGE/maxresdefault.jpg',
+      },
+      {
+        'contentUrl': 'https://bastianu.github.io/videos/3.mp4',
+        'contentType': 'video/mp4',
+        'title': 'Slt3',
+         'thumb': 'https://i3.ytimg.com/vi/GSPUUN4nDGE/maxresdefault.jpg',
+      }]
       castPlayer.init()
       break;
-    case 'b':
-      console.log(castPlayer.mediaContents)
+    case 'e':
+      carousel.textContent = '';
+      castPlayer.mediaContents = event.data.data
+      castPlayer.init()
       break;
 
     default:
