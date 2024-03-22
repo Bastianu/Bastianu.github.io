@@ -1670,7 +1670,7 @@ let castPlayer = new CastPlayer();
 //     setTimeout(castPlayer.initializeCastPlayer, 3000);
 //   }
 // };
-
+// export {castPlayer}
 
 
 window.addEventListener('message', event => {
