@@ -169,6 +169,15 @@ var CastPlayer = function () {
   this.initializeUI();
  }
 
+ CastPlayer.prototype.reset = function () {
+  this.setupLocalPlayer();
+  this.addVideoThumbs();
+ }
+
+ CastPlayer.prototype.setMedia = function (medias) {
+  this.mediaContents = medias
+ }
+
 CastPlayer.prototype.initializeCastPlayer = function () {
   var options = {};
 
@@ -512,7 +521,7 @@ CastPlayer.prototype.setupRemotePlayer = function () {
         this.playerHandler.updateDisplay();
         return;
       }
-
+      
       let media = session.getMediaSession();
       if (!media) {
         this.mediaInfo = null;
@@ -1676,33 +1685,19 @@ window.addEventListener('message', event => {
       break;
     case 'd':
       carousel.textContent = '';
-      mediaJSON['media'] = [{
-        'contentUrl': 'https://bastianu.github.io/videos/1.mp4',
-        'contentType': 'video/mp4',
-        'title': 'Slt',
-        'thumb': 'https://i3.ytimg.com/vi/GSPUUN4nDGE/maxresdefault.jpg',
-      },
-      {
-        'contentUrl': 'https://bastianu.github.io/videos/3.mp4',
-        'contentType': 'video/mp4',
-        'title': 'Slt2',
-         'thumb': 'https://i3.ytimg.com/vi/GSPUUN4nDGE/maxresdefault.jpg',
-      },
-      {
-        'contentUrl': 'https://bastianu.github.io/videos/3.mp4',
-        'contentType': 'video/mp4',
-        'title': 'Slt3',
-         'thumb': 'https://i3.ytimg.com/vi/GSPUUN4nDGE/maxresdefault.jpg',
-      }]
-      castPlayer.init()
       break;
     case 'e':
-      carousel.textContent = '';
+      console.log(event.data.data)
+      castPlayer.setMedia(event.data.data)
       mediaJSON['media'] = event.data.data
       castPlayer.mediaContents = event.data.data
-      castPlayer.init()
+      castPlayer.reset()
       break;
 
+    case 'stop': 
+      let session = cast.framework.CastContext.getInstance().getCurrentSession();
+      if(session) session.stop()
+      break;
     default:
       break;
   }
