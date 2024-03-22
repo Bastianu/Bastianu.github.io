@@ -1651,17 +1651,28 @@ CastPlayer.getErrorMessage = function (error) {
 };
 
 let castPlayer = new CastPlayer();
-window['__onGCastApiAvailable'] = function (isAvailable) {
-  if (isAvailable) {
-    setTimeout(castPlayer.initializeCastPlayer, 3000);
-  }
-};
+// window['__onGCastApiAvailable'] = function (isAvailable) {
+//   if (isAvailable) {
+//     setTimeout(castPlayer.initializeCastPlayer, 3000);
+//   }
+// };
 
 window.addEventListener('message', event => {
   if(event.origin != 'http://localhost:8080') return
   console.log(chrome.cast)
   switch(event.data){
     case 'a': 
+      castPlayer.init()
+      break;
+    case 'b':
+      console.log(castPlayer.mediaContents)
+      break;
+    case 'c':
+      console.log(castPlayer.initializeCastPlayer())
+      break;
+    case 'd':
+      const myNode = document.getElementById("carousel");
+      myNode.textContent = '';
       castPlayer.init()
       break;
     case 'b':
