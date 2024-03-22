@@ -1,3 +1,3 @@
-import { castPlayer } from "./CastVideos";
+import { castPlayer } from "./CastVideos.js";
 
 window.castPlayer = castPlayer
