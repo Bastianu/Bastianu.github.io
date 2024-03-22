@@ -1676,7 +1676,7 @@ window.addEventListener('message', event => {
       break;
     case 'd':
       carousel.textContent = '';
-      castPlayer.mediaContents = [{
+      mediaJSON['media'] = [{
         'contentUrl': 'https://bastianu.github.io/videos/1.mp4',
         'contentType': 'video/mp4',
         'title': 'Slt',
@@ -1698,6 +1698,7 @@ window.addEventListener('message', event => {
       break;
     case 'e':
       carousel.textContent = '';
+      mediaJSON['media'] = event.data.data
       castPlayer.mediaContents = event.data.data
       castPlayer.init()
       break;
