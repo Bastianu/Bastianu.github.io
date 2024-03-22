@@ -22,6 +22,8 @@ import {
   breaksJSON
 } from './ads.js';
 
+mediaJSON.media = []
+
 /** Cleaner UI for demo purposes. */
 const DEMO_MODE = false;
 
