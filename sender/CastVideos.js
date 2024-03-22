@@ -1670,7 +1670,7 @@ let castPlayer = new CastPlayer();
 //     setTimeout(castPlayer.initializeCastPlayer, 3000);
 //   }
 // };
-// export {castPlayer}
+export {castPlayer}
 
 
 window.addEventListener('message', event => {
@@ -1706,6 +1706,4 @@ window.addEventListener('message', event => {
     default:
       break;
   }
-  return {cast: chrome.cast, castPlayer: castPlayer}
-
 });
